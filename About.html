@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #121212; /* Dark background */
+        color: white; /* Light text for contrast */
+    }
+    header {
+        background-color: rgba(0, 0, 0, 0.3); /* Transparent background */
+        color: white;
+        padding: 40px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed; /* Fixed position for dynamic movement */
+        width: 100%; /* Full width */
+        z-index: 100;
+        transition: top 0.3s, bottom 0.3s; /* Smooth movement */
+    }
+    .logo {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 24px;
+        font-weight: bold;
+        margin-left: 20px;
+    }
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 15px;
+        margin-right: 20px;
+    }
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+        padding: 10px 15px;
+    }
+    nav ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent hover effect */
+        border-radius: 5px;
+    }
+    .container {
+        max-width: 100%; /* Full width container */
+        margin: 0 auto; /* Center align content */
+    }
+    .grid {
+        display: grid;
+        grid-gap: 20px;
+    }
+    .grid.single-row img {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        display: block;
+        opacity: 0.8; /* Makes the first image slightly opaque */
+    }
+    .grid.middle-row {
+        display: grid;
+        grid-template-columns: 2fr 1fr; /* Large image and smaller image */
+        gap: 40px 30px; /* Increased vertical and horizontal gap */
+        margin: 15px;
+    }
+    .grid.middle-row img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        display: block;
+    }
+    footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin-top: 20px;
+        font-size: 14px;
+    }
+    footer a {
+        color: #4caf50;
+        text-decoration: none;
+        margin: 0 5px;
+    }
+    footer a:hover {
+        text-decoration: underline;
+    }
+</style>
+<html lang="en">
+    <header id="navbar">
+        <div class="logo">FoodMandu</div>
+        <nav>
+            <ul>
+                <li><a href="trial.html" target="_self">Home</a></li>
+                <li><a href="About.html" target="_parent">About</a></li>
+                <li><a href="men.html" target="_parent">Menu</a></li>
+                <li><a href="login.html" target="_parent">Reservations</a></li>
+                <li><a href="bon_signup.html" target="_parent">Sign Up</a></li>
+                <li><a href="Gallery.html" target="_parent">Gallery</a></li>
+                <li><a href="hours.html" target="_parent">Hours and Location</a></li>
+                <li><a href="emp_login.php" target="_parent">Employee</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | FoodMandu</title>
+    <link rel="stylesheet" href="abou.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+   
+    <section class="about-hero">  
+        <div class="hero-content">
+            <h1>Welcome to FoodMandu</h1>
+            
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about">
+        <div class="about-container">
+            <div class="about-text">
+                <h2>Our Story</h2>
+                <p>FoodMandu was founded on the belief that great food brings people together. 
+                With a vision of creating a restaurant where flavors from around the world meet a warm and inviting atmosphere, 
+                we have been serving culinary excellence for over a decade.</p>
+                <p>Our chefs hand-select the freshest ingredients, ensuring that each dish tells a story of authenticity, 
+                passion, and tradition. Whether you're here for a romantic dinner, a family gathering, or a corporate event, 
+                we promise an unforgettable experience.</p>
+                <p>At FoodMandu, we don’t just serve meals—we create moments. We invite you to indulge in an experience 
+                where every plate is a work of art, and every bite is a journey of taste.</p>
+            </div>
+            <div class="about-image">
+                <img src="restu/backg.jpeg" alt="Restaurant Interior">
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose">
+        <h2>Why Choose Us?</h2>
+        <p>We are more than just a restaurant—we are a destination for food lovers, a place where flavors are celebrated, 
+        and every dish is crafted with passion and precision. Here’s why our guests love us:</p>
+        <div class="why-grid">
+            <div class="why-item">
+                <i class="fas fa-utensils"></i>
+                <h3>Exceptional Cuisine</h3>
+                <p>Our menu is a carefully curated selection of traditional and contemporary dishes, 
+                inspired by global flavors. Each plate is designed to delight your palate and offer a 
+                memorable dining experience.</p>
+            </div>
+            <div class="why-item">
+                <i class="fas fa-leaf"></i>
+                <h3>Fresh & Locally Sourced Ingredients</h3>
+                <p>We believe in quality. That’s why we source our ingredients from trusted local farmers 
+                and suppliers. Every dish is prepared fresh, ensuring the highest standard of taste and nutrition.</p>
+            </div>
+            <div class="why-item">
+                <i class="fas fa-glass-cheers"></i>
+                <h3>Elegant Ambiance & Hospitality</h3>
+                <p>At FoodMandu, dining is an experience. Our elegant interiors, cozy lighting, 
+                and warm hospitality make every visit feel like a special occasion.</p>
+            </div>
+            <div class="why-item">
+                <i class="fas fa-award"></i>
+                <h3>Recognized Excellence</h3>
+                <p>FoodMandu has been awarded multiple times for its outstanding service, innovative menu, 
+                and culinary mastery. Our chefs are celebrated experts in their fields.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Team -->
+    <section class="team">
+        <h2>Meet Our Culinary Experts</h2>
+        <p>Behind every exquisite dish is a team of talented chefs and hospitality professionals dedicated to perfection. 
+        Meet the passionate individuals who bring our vision to life.</p>
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="quisines/chef.jpg" alt="Head Chef">
+                <h3>Chef Antonio Rossi</h3>
+                <p>With over 20 years of experience in Michelin-starred restaurants, Chef Rossi leads our kitchen 
+                with precision and artistry. His expertise in Mediterranean and French cuisine makes every dish a masterpiece.</p>
+            </div>
+            <div class="team-member">
+                <img src="quisines/manager.webp" alt="Pastry Chef">
+                <h3>Chef Marie Leclerc</h3>
+                <p>Renowned for her award-winning pastries, Chef Marie brings sweetness to our menu. 
+                Her desserts blend classic European techniques with modern creativity.</p>
+            </div>
+            <div class="team-member">
+                <img src="quisines/member.jpeg" alt="Sous Chef">
+                <h3>Chef David Kim</h3>
+                <p>Known for his innovative approach, Chef David specializes in Asian fusion cuisine. 
+                His bold flavors and artistic presentation make each dish a culinary adventure.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Commitment -->
+    <section class="commitment">
+        <h2>Our Commitment to Excellence</h2>
+        <p>At FoodMandu, we are committed to sustainability, excellence, and customer satisfaction. 
+        We take pride in offering a dining experience that not only satisfies your taste buds but also 
+        contributes positively to the community and the environment.</p>
+        
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 FoodMandu | All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

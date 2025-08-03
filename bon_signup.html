@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bon Appétit - Sign Up for an amazing experience">
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="bon_signup.css"> 
+</head>
+
+<body>
+    <div class="signup-container">
+        <h2>Sign Up</h2>
+        
+      
+
+        <form action="bon_signup.php" method="post" autocomplete="off">
+            <label for="username">Full Name:</label>
+            <input type="text" id="username" name="username" required pattern="[A-Za-z\s]+" title="Only letters and spaces allowed">
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="pwd">Password:</label>
+            <input type="password" id="pwd" name="pwd" required minlength="6">
+
+            <button type="submit">Sign Up</button>
+        </form>
+
+        <p>Already have an account? <a href="login.html">Sign in here</a></p>
+    </div>
+</body>
+
+</html>

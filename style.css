@@ -1,0 +1,424 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script:wght@400;600&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif; 
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8; 
+    color: #333; 
+}
+
+h1, h2, h3 {
+    font-family: 'Dancing Script', cursive; 
+}
+
+/* Top Bar */
+.top-bar {
+    background: #b89e60; 
+    color: #fff;
+    text-align: center;
+    padding: 8px 0;
+    font-weight: 500;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 15px 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 600;
+    color: #b89e60; 
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #444;
+    font-size: 1.1em;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #b89e60; 
+}
+
+/* General Image Styling */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Welcome Section */
+#Welcome {
+    text-align: center;
+    padding: 80px 15px;
+    background: #ffffff;
+}
+
+#Welcome h1 {
+    font-size: 2.8em;
+    color: #b89e60;
+    font-weight: 600;
+}
+
+#Welcome p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 20px auto;
+    line-height: 1.6;
+}
+
+#Welcome .image img {
+    max-width: 80%;
+    border-radius: 10px;
+}
+
+/* Menu Section */
+#Menu {
+    text-align: center;
+    padding: 80px 15px;
+    background: #fdfdfd;
+}
+
+#Menu h2 {
+    font-size: 2.8em;
+    color: #b89e60;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+/* Menu Container */
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Menu Section Cards */
+.menu-section {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.menu-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Section Title */
+.menu-section h2 {
+    font-size: 1em;
+    color: #b89e60;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+/* Menu Text */
+.menu-section p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* Decorative Line */
+.menu-section::before {
+    content: "";
+    width: 50px;
+    height: 4px;
+    background: #b89e60;
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Experience Section */
+#experience {
+    text-align: left;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 40px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+#experience h2 {
+    font-size: 2.3em;
+    color: #b89e60;
+    text-align: center;
+}
+
+#experience ul {
+    list-style: none;
+    padding: 0;
+}
+
+#experience li {
+    font-size: 1.2em;
+    line-height: 1.8;
+    padding: 8px 0;
+}
+
+/* Testimonials Section */
+#testimonials {
+    padding: 60px 15px;
+    background: #fff;
+    text-align: center;
+}
+
+#testimonials h2 {
+    font-size: 2.5em;
+    color: #b89e60;
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.testimonial {
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 400px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Awards Section */
+#awards {
+    padding: 60px 15px;
+    background: #fdfdfd;
+    text-align: center;
+}
+
+#awards h2 {
+    font-size: 2.5em;
+    color: #b89e60;
+}
+
+#awards ul {
+    list-style: none;
+    padding: 0;
+}
+
+#awards li {
+    font-size: 1.2em;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+/* Newsletter Section */
+#newsletter {
+    padding: 60px 15px;
+    background: #fff;
+    text-align: center;
+}
+
+#newsletter h2 {
+    font-size: 2.5em;
+    color: #b89e60;
+}
+
+#newsletter form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#newsletter input[type="email"] {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    flex: 1;
+    max-width: 300px;
+}
+
+#newsletter button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background: #b89e60;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#newsletter button:hover {
+    background: #a78751;
+}
+
+/* Events Section */
+#events {
+    padding: 60px 15px;
+    background: #fdfdfd;
+    text-align: center;
+}
+
+#events h2 {
+    font-size: 2.5em;
+    color: #b89e60;
+}
+
+.event {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.event h3 {
+    font-size: 1.8em;
+    color: #b89e60;
+}
+
+.event p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Reservation Section */
+#reservation {
+    padding: 60px 15px;
+    background: #fff;
+    text-align: center;
+}
+
+#reservation h2 {
+    font-size: 2.5em;
+    color: #b89e60;
+}
+
+#reservation form {
+    display: grid;
+    gap: 15px;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+#reservation label {
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+#reservation input,
+#reservation button {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#reservation button {
+    background: #b89e60;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#reservation button:hover {
+    background: #a78751;
+}
+
+/* Footer */
+footer {
+    background: #ffffff;
+    text-align: center;
+    padding: 40px 0;
+    border-top: 2px solid #b89e60;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-info p {
+    margin: 8px 0;
+    font-size: 1.1em;
+}
+
+.contact-info a {
+    color: #b89e60;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons a {
+    color: #b89e60;
+    font-size: 1.4em;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #444;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 1em;
+    color: #777;
+}

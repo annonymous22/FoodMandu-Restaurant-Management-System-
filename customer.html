@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Portal</title>
+    <link rel="stylesheet" href="cstyle.css"> <!-- Linking external CSS -->
+</head>
+<body>
+
+    <header>
+        <h1>FoodMandu Customer Portal</h1>
+        <form action="logout.php" method="POST">
+            <button type="submit" class="sign-out-btn">Sign Out</button>
+        </form>
+    </header>
+    
+    <section id="choices">
+        <form action="redirect.php" method="POST" class="btn-container">
+            <button type="submit" name="page" value="menu" class="btn">Menu</button>
+            <button type="submit" name="page" value="reservations" class="btn">Reservations</button>
+            <button type="submit" name="page" value="cancel-order" class="btn">Cancel Order</button>
+            <button type="submit" name="page" value="feedback" class="btn">Cancel Reservations</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script> 
+</body>
+</html>

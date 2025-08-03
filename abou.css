@@ -1,0 +1,191 @@
+/* Root Variables */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+:root {
+    --primary-color: #121212; /* Deep Charcoal for Background */
+    --secondary-color: #ffffff; /* White for Highlights */
+    --text-color: #ffffff; /* Light Text for Contrast */
+    --text-light: #bdbdbd; /* Muted Text */
+    --bg-dark: #1e1e1e; /* Subtle Dark Background for Sections */
+    --shadow-dark: rgba(0, 0, 0, 0.5); /* Strong Shadow for Depth */
+    --font-family: 'Dancing Script', cursive; /* Elegant Font */
+}
+
+/* General Styles */
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    font-size: 1.2em;
+}
+
+/* Hero Section (Static Background) */
+.about-hero {
+    background: url('restu/pexels-quark-studio-1159039-3201921.jpg') center/cover no-repeat;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    color: var(--text-color);
+    width: 100%;
+    padding: 0 5%;
+    box-sizing: border-box;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    width: 90%;
+    max-width: 800px;
+    background: rgba(30, 30, 30, 0); /* Subtle Glass Effect */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    font-weight: bold;
+    color: var(--secondary-color); /* White for Highlight */
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    opacity: 0.9;
+    color: var(--text-light); /* Subtle Muted Text */
+}
+
+/* About Section */
+.about {
+    padding: 60px 5%;
+    background: var(--bg-dark);
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    flex: 1;
+    max-width: 50%;
+}
+
+.about-text h2 {
+    font-size: 2.5em;
+    color: var(--secondary-color); /* White Heading */
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: var(--text-light);
+}
+
+.about-image {
+    flex: 1;
+    max-width: 40%;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px var(--shadow-dark);
+}
+
+/* Why Choose Us */
+.why-choose {
+    padding: 50px 5%;
+    background: var(--primary-color); /* Dark Background */
+}
+
+.why-choose h2 {
+    font-size: 3em;
+    color: var(--secondary-color); /* White Highlight */
+    margin-bottom: 30px;
+}
+
+.why-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.why-item {
+    max-width: 300px;
+    text-align: center;
+    padding: 20px;
+    background: var(--bg-dark); /* Subtle Dark Container */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px var(--shadow-dark);
+}
+
+.why-item i {
+    font-size: 2.5em;
+    color: var(--text-color); /* White Icons */
+    margin-bottom: 15px;
+}
+
+.why-item h3 {
+    font-size: 1.5em;
+    color: var(--text-color);
+}
+
+.why-item p {
+    font-size: 1.1em;
+    color: var(--text-light);
+}
+
+/* Team Section */
+.team {
+    padding: 50px 5%;
+    background: var(--bg-dark);
+}
+
+.team h2 {
+    font-size: 2.5em;
+    color: var(--secondary-color); /* White Heading */
+    margin-bottom: 30px;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    max-width: 320px;
+    text-align: center;
+    background: var(--primary-color); /* Darker Container */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px var(--shadow-dark);
+}
+
+.team-member img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    background: var(--primary-color);
+    color: var(--secondary-color); /* White Text */
+    padding: 20px;
+    font-size: 1em;
+}

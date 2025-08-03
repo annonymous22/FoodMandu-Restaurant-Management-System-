@@ -1,0 +1,126 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+/* Root Variables */
+:root {
+    --background-color: #f9f9f9; /* Soft background */
+    --form-background: #ffffff; /* White for form */
+    --text-color: #444; /* Dark gray text */
+    --primary-color: #ff7f50; /* Coral */
+    --secondary-color: #ffae6d; /* Soft Orange */
+    --border-color: #ddd; /* Light gray */
+    --shadow-light: rgba(0, 0, 0, 0.05);
+    --shadow-dark: rgba(0, 0, 0, 0.15);
+    --font-family: 'Poppins', sans-serif;
+}
+
+/* General Styles */
+body {
+    background-color: var(--background-color);
+    font-family: var(--font-family);
+    text-align: center;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Page Title */
+h1 {
+    font-size: 2em;
+    font-weight: 600;
+    margin-top: 30px;
+    color: var(--primary-color);
+}
+
+/* Instructions */
+p {
+    font-size: 1.1em;
+    color: var(--text-color);
+}
+
+/* Form Container */
+#cancel-form {
+    background: var(--form-background);
+    width: 40%;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px var(--shadow-dark);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Labels */
+label {
+    font-weight: 600;
+    text-align: left;
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+/* Input Fields */
+input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    background: white;
+    color: var(--text-color);
+    font-size: 1em;
+    outline: none;
+    transition: border 0.3s ease-in-out;
+}
+
+input:focus {
+    border-color: var(--primary-color);
+}
+
+/* Cancel Button */
+#cancel-order {
+    background: linear-gradient(120deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 12px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    margin-top: 15px;
+}
+
+#cancel-order:hover {
+    background: linear-gradient(120deg, var(--secondary-color), var(--primary-color));
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px var(--shadow-dark);
+}
+
+/* Cancellation Message */
+#cancellation-message {
+    display: none;
+    background: var(--form-background);
+    width: 40%;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px var(--shadow-dark);
+}
+
+#cancellation-message h2 {
+    color: var(--primary-color);
+    font-size: 1.5em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #cancel-form, #cancellation-message {
+        width: 80%;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+}

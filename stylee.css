@@ -1,0 +1,92 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;600&display=swap');
+
+:root {
+    --primary-color: #fff; 
+    --secondary-color: #b89e60; 
+    --text-color: #444; 
+    --light-bg: #fdfdfd;
+    --hover-color: #a78751; 
+    --shadow-dark: rgba(0, 0, 0, 0.1);
+    --font-family: 'Quicksand', sans-serif;
+}
+
+/* General Styles */
+body {
+    font-family: var(--font-family);
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 20px;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+/* Buttons */
+.btn-container {
+    margin-top: 30px;
+}
+
+.btn {
+    background: var(--secondary-color);
+    color: white;
+    padding: 12px 20px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px var(--shadow-dark);
+    transition: background 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: var(--hover-color);
+}
+
+/* Reservation & Feedback Forms */
+.hidden {
+    display: none;
+}
+
+#reservation-form, #feedback-form {
+    margin: 30px auto;
+    padding: 20px;
+    width: 50%;
+    background: var(--light-bg);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px var(--shadow-dark);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: white;
+    color: #333;
+}
+
+button[type="submit"] {
+    background: var(--secondary-color);
+    color: white;
+    padding: 12px 15px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+button[type="submit"]:hover {
+    background: var(--hover-color);
+}

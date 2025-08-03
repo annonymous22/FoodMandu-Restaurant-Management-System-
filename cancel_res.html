@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancel Reservation</title>
+    <link rel="stylesheet" href="cres.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Cancel Your Reservation</h2>
+        <form action="cancel_res.php" method="POST">
+            <label for="guest_name">Name:</label>
+            <input type="text" id="guest_name" name="guest_name" required>
+
+            <label for="table_number">Table Number:</label>
+            <input type="number" id="table_number" name="table_number" required>
+
+            <button type="submit">Cancel Reservation</button>
+        </form>
+    </div>
+</body>
+</html>

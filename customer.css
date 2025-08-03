@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+:root {
+    --primary-color: #0e0b16;
+    --secondary-color: #f8e9a1;
+    --accent-color: #a1c6ea;
+    --text-color: #ffffff;
+    --hover-color: #ffcab1;
+    --shadow-dark: rgba(255, 255, 255, 0.2);
+    --font-family: 'Poppins', sans-serif;
+    --gradient-light: linear-gradient(120deg, #f8e9a1, #a1c6ea);
+    --gradient-dark: linear-gradient(120deg, #ffcab1, #a1c6ea);
+}
+
+body {
+    background-color: var(--primary-color);
+    font-family: var(--font-family);
+    text-align: center;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: var(--gradient-light);
+    color: black;
+    padding: 20px;
+    font-size: 2em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 8px var(--shadow-dark);
+}
+
+/* Button Container */
+.btn-container {
+    display: flex;
+    justify-content: center;  /* Aligns buttons in a straight horizontal line */
+    gap: 20px;  /* Adds space between buttons */
+    width: 100%;
+    margin: 50px auto;
+    flex-wrap: nowrap;  /* Prevents wrapping */
+}
+
+/* Button Styling */
+.btn {
+    width: 200px; /* Set a fixed width for uniformity */
+    height: 100px; /* Set a fixed height */
+    font-size: 1.2em;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    background: var(--gradient-light);
+    color: black;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px var(--shadow-dark);
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Button Hover Effect */
+.btn:hover {
+    background: var(--gradient-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px var(--shadow-dark);
+}
+
+/* Responsive Layout */
+@media (max-width: 800px) {
+    .btn-container {
+        flex-wrap: wrap; /* Allows wrapping only on smaller screens */
+    }
+
+    .btn {
+        width: 45%; /* Two buttons per row */
+    }
+}
+
+@media (max-width: 600px) {
+    .btn {
+        width: 100%; /* Stack buttons vertically on small screens */
+    }
+}

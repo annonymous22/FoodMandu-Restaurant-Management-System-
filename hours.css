@@ -1,0 +1,131 @@
+/* General Styles */
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: transparent; /* Transparent navbar */
+    padding: 20px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensures navbar stays on top */
+}
+
+/* Flexbox for Header */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Logo */
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f8b400; /* Highlight color on hover */
+}
+
+/* Hours & Location Section with Background Image */
+#hours-location {
+    text-align: center;
+    padding: 120px 20px 50px;
+    background: url('restu/pexels-evonics-1058277.jpg') center/cover no-repeat; /* Add your image here */
+    position: relative;
+}
+
+/* Dark Overlay to Improve Text Visibility */
+#hours-location::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent dark overlay */
+    z-index: 0;
+}
+
+/* Content Styling */
+#hours-location h2,
+#hours-location p {
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+/* Links */
+.address a, .phone a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.address a:hover, .phone a:hover {
+    text-decoration: underline;
+}
+
+/* Google Map */
+.map {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    position: relative;
+    z-index: 1; /* Ensures the map stays interactive */
+}
+
+iframe {
+    width: 100%;
+    height: 600px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 2; /* Ensures the map is above the overlay */
+}

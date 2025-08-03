@@ -1,0 +1,87 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f9;
+    text-align: center;
+    margin: 0;
+    padding: 0; 
+    background-image: url('restu/pexels-evonics-1058277.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Page Title */
+h2 {
+    color: white;
+    font-size: 26px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+/* Form Container */
+form {
+    background: white;
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Labels */
+label {
+    display: block;
+    font-weight: 600;
+    margin: 12px 0 5px;
+    text-align: left;
+    color: #34495e;
+    font-size: 14px;
+}
+
+/* Input Fields */
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #bdc3c7;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    transition: border 0.3s;
+}
+
+/* Input Focus Effect */
+input:focus {
+    border: 2px solid #ff6600;
+    outline: none;
+}
+
+/* Button */
+button {
+    background: #ff6600;
+    color: white;
+    font-size: 18px;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    font-weight: 600;
+}
+
+button:hover {
+    background: #e65c00;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    form {
+        max-width: 90%;
+    }
+}

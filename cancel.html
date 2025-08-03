@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancel Order</title>
+    <link rel="stylesheet" href="cord.css">
+</head>
+<body>
+    <h1>Cancel Your Order</h1>
+    <p>Enter your order details to cancel your request.</p>
+
+    <div id="cancel-form">
+        <label for="food-item">Food Item Ordered:</label>
+        <input type="text" id="food-item" placeholder="Enter ordered food">
+
+        <label for="delivery-place">Delivery Place:</label>
+        <input type="text" id="delivery-place" placeholder="Enter your delivery address">
+
+        <label for="delivery-time">Delivery Time:</label>
+        <input type="time" id="delivery-time">
+
+        <button id="cancel-order">Cancel Order</button>
+    </div>
+
+    <div id="cancellation-message" style="display: none;">
+        <h2>Order Cancelled</h2>
+        <p id="cancel-summary"></p>
+    </div>
+
+    <script>
+        document.getElementById("cancel-order").addEventListener("click", function() {
+            const foodItem = document.getElementById("food-item").value;
+            const deliveryPlace = document.getElementById("delivery-place").value;
+            const deliveryTime = document.getElementById("delivery-time").value;
+
+            if (!foodItem || !deliveryPlace || !deliveryTime) {
+                alert("Please enter all details to cancel the order.");
+                return;
+            }
+
+            fetch("cancel.php", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: `food_item=${foodItem}&delivery_place=${deliveryPlace}&delivery_time=${deliveryTime}`
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    document.getElementById("cancel-summary").innerHTML = `Your order for <b>${foodItem}</b> to be delivered at <b>${deliveryPlace}</b> at <b>${deliveryTime}</b> has been cancelled.`;
+                    document.getElementById("cancel-form").style.display = "none";
+                    document.getElementById("cancellation-message").style.display = "block";
+                } else {
+                    alert("Error cancelling order: " + data.message);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

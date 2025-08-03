@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Order</title>
+    <link rel="stylesheet" href="res.css">
+</head>
+<body>
+    <h1>Order Your Food</h1>
+    <p>Select your cuisine and food item.</p>
+
+    <div id="order-form">
+        <label for="cuisine">Select Cuisine:</label>
+        <select id="cuisine">
+            <option value="">Select Cuisine</option>
+            <option value="Mexican">Mexican</option>
+            <option value="Chinese">Chinese</option>
+            <option value="African">African</option>
+            <option value="Indian">Indian</option>
+            <option value="French">French</option>
+        </select>
+
+        <label for="food-item">Food Item:</label>
+        <select id="food-item">
+            <option value="">Select Food</option>
+        </select>
+
+        <label for="delivery-place">Delivery Place:</label>
+        <input type="text" id="delivery-place" placeholder="Enter address">
+
+        <label for="delivery-time">Delivery Time:</label>
+        <input type="time" id="delivery-time">
+
+        <button id="place-order">Place Order</button>
+    </div>
+
+    <div id="confirmation-message" style="display: none;">
+        <h2>Order Placed!</h2>
+        <p id="order-summary"></p>
+    </div>
+
+    <script>
+        // Fetch Food Options Based on Cuisine
+        document.getElementById("cuisine").addEventListener("change", function() {
+            const selectedCuisine = this.value;
+            const foodSelect = document.getElementById("food-item");
+
+            // Clear previous options
+            foodSelect.innerHTML = '<option value="">Select Food</option>';
+
+            if (selectedCuisine) {
+                fetch("fetch_food.php?cuisine=" + selectedCuisine)
+                    .then(response => response.json())
+                    .then(data => {
+                        data.forEach(item => {
+                            let option = document.createElement("option");
+                            option.value = item.food_name;
+                            option.textContent = item.food_name;
+                            foodSelect.appendChild(option);
+                        });
+                    })
+                    .catch(error => console.error("Error fetching food options:", error));
+            }
+        });
+
+        // Place Order
+        document.getElementById("place-order").addEventListener("click", function() {
+            const foodItem = document.getElementById("food-item").value;
+            const deliveryPlace = document.getElementById("delivery-place").value;
+            const deliveryTime = document.getElementById("delivery-time").value;
+
+            if (!foodItem || !deliveryPlace || !deliveryTime) {
+                alert("Please fill in all fields.");
+                return;
+            }
+
+            fetch("order.php", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: `food_item=${foodItem}&delivery_place=${deliveryPlace}&delivery_time=${deliveryTime}`
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    document.getElementById("order-summary").innerHTML = `You ordered <b>${foodItem}</b> to be delivered at <b>${deliveryPlace}</b> at <b>${deliveryTime}</b>.`;
+                    document.getElementById("order-form").style.display = "none";
+                    document.getElementById("confirmation-message").style.display = "block";
+                } else {
+                    alert("Error placing order: " + data.message);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

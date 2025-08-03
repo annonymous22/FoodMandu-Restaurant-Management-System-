@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Reservation</title>
+    <link rel="stylesheet" href="reserve1.css">
+</head>
+<body>
+    <h2>Book a Table</h2>
+    <form action="reserve.php" method="POST">
+        <label for="guest_name">Name:</label>
+        <input type="text" id="guest_name" name="guest_name" required>
+
+        <label for="table_number">Table Number:</label>
+        <input type="number" id="table_number" name="table_number" required>
+
+        <label for="num_guests">Number of Guests:</label>
+        <input type="number" id="num_guests" name="num_guests" required>
+
+        <label for="reservation_date">Date:</label>
+        <input type="date" id="reservation_date" name="reservation_date" required>
+
+        <label for="reservation_time">Time:</label>
+        <input type="time" id="reservation_time" name="reservation_time" required>
+
+        <button type="submit">Reserve Now</button>
+    </form>
+</body>
+</html>

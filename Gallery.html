@@ -1,0 +1,183 @@
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #121212; /* Dark background */
+        color: white; /* Light text for contrast */
+    }
+    header {
+        background-color: rgba(0, 0, 0, 0.3); /* Transparent background */
+        color: white;
+        padding: 40px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed; /* Fixed position for dynamic movement */
+        width: 100%; /* Full width */
+        z-index: 100;
+        transition: top 0.3s, bottom 0.3s; /* Smooth movement */
+    }
+    .logo {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 24px;
+        font-weight: bold;
+        margin-left: 20px;
+    }
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 15px;
+        margin-right: 20px;
+    }
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+        padding: 10px 15px;
+    }
+    nav ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent hover effect */
+        border-radius: 5px;
+    }
+    .container {
+        max-width: 100%; /* Full width container */
+        margin: 0 auto; /* Center align content */
+    }
+    .grid {
+        display: grid;
+        grid-gap: 20px;
+    }
+    .grid.single-row img {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        display: block;
+        opacity: 0.8; /* Makes the first image slightly opaque */
+    }
+    .grid.middle-row {
+        display: grid;
+        grid-template-columns: 2fr 1fr; /* Large image and smaller image */
+        gap: 40px 30px; /* Increased vertical and horizontal gap */
+        margin: 15px;
+    }
+    .grid.middle-row img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        display: block;
+    }
+    footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin-top: 20px;
+        font-size: 14px;
+    }
+    footer a {
+        color: #4caf50;
+        text-decoration: none;
+        margin: 0 5px;
+    }
+    footer a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+    <header id="navbar">
+        <div class="logo">FoodMandu</div>
+        <nav>
+            <ul>
+                <li><a href="trial.html" target="_self">Home</a></li>
+                <li><a href="About.html" target="_parent">About</a></li>
+                <li><a href="men.html" target="_parent">Menu</a></li>
+                <li><a href="login.html" target="_parent">Reservations</a></li>
+                <li><a href="bon_signup.html" target="_parent">Sign Up</a></li>
+                <li><a href="Gallery.html" target="_parent">Gallery</a></li>
+                <li><a href="hours.html" target="_parent">Hours and Location</a></li>
+                <li><a href="emp_login.php" target="_parent">Employee</a></li>
+            </ul>
+        </nav>
+    </header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Our Restaurant</title>
+    <link rel="stylesheet" href="galler.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Loader -->
+    <div class="loader">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="gallery-hero">
+        <div class="hero-content">
+            <h1>Discover Our Culinary Art</h1>
+            <p>Experience the elegance and flavors in every dish.</p>
+        </div>
+    </section>
+
+    <!-- Filters Section -->
+    <div class="filters">
+        <button class="filter-btn" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="dishes">Dishes</button>
+        <button class="filter-btn" data-filter="interiors">Interiors</button>
+        <button class="filter-btn" data-filter="desserts">Desserts</button>
+    </div>
+
+    <!-- Gallery Section -->
+    <section class="gallery">
+        <h2>Our Gallery</h2>
+        <div class="gallery-grid">
+            <!-- Existing Images -->
+            <div class="gallery-item dishes">
+                <img src="restu/pexels-chanwalrus-958545.jpg" alt="Dish 1">
+                <div class="gallery-caption">Elegance served on a plate.</div>
+            </div>
+            <div class="gallery-item dishes">
+                <img src="restu/pexels-valeriya-842571.jpg" alt="Dish 2">
+                <div class="gallery-caption">The heart of every dish—fresh, local, and pure.</div>
+            </div>
+            <div class="gallery-item interiors">
+                <img src="restu/pexels-evonics-1058277.jpg" alt="Interior 1">
+                <div class="gallery-caption">Ambiance that speaks to your soul.</div>
+            </div>
+            <div class="gallery-item dishes">
+                <img src="restu/pexels-robinstickel-70497.jpg" alt="Dish 3">
+                <div class="gallery-caption">Every bite tells a story of passion and precision.</div>
+            </div>
+
+            <!-- New Images -->
+            <div class="gallery-item desserts">
+                <img src="restu/Ice_cream_with_whipped_cream,_chocolate_syrup,_and_a_wafer_(cropped).jpg" alt="Dessert 2">
+                <div class="gallery-caption">Where sweetness meets artistry.</div>
+            </div>
+        
+            
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <img src="" alt="Enlarged Image">
+        <span class="close-lightbox">&times;</span>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Our Restaurant | Designed with ❤️</p>
+    </footer>
+
+    <script src="gallery.js"></script>
+</body>
+</html>

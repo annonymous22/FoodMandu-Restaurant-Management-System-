@@ -1,0 +1,107 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+/* Root Variables */
+:root {
+    --primary-bg: #0e0b16; /* Deep Black */
+    --secondary-bg: #1a1a2e; /* Dark Blue */
+    --card-bg: #162447; /* Darker Blue */
+    --text-color: #ffffff; /* White */
+    --accent-color: #e94560; /* Red Accent */
+    --hover-color: #ff2e63; /* Brighter Red */
+    --shadow: rgba(255, 255, 255, 0.2);
+    --font-family: 'Poppins', sans-serif;
+}
+
+/* General Styles */
+body {
+    background-color: var(--primary-bg);
+    font-family: var(--font-family);
+    color: var(--text-color);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    background: var(--secondary-bg);
+    border-radius: 12px;
+    box-shadow: 0 6px 12px var(--shadow);
+}
+
+/* Dashboard Heading */
+.dashboard-container h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: var(--accent-color);
+}
+
+.dashboard-container p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+/* Dashboard Links */
+.dashboard-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Dashboard Card */
+.dashboard-card {
+    width: 200px;
+    height: 180px;
+    padding: 20px;
+    background: var(--card-bg);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px var(--shadow);
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboard-card i {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: var(--accent-color);
+}
+
+.dashboard-card h3 {
+    font-size: 1.3em;
+    margin-bottom: 5px;
+}
+
+.dashboard-card p {
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+/* Hover Effect */
+.dashboard-card:hover {
+    background: var(--hover-color);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px var(--shadow);
+}
+
+/* Responsive Design */
+@media (max-width: 800px) {
+    .dashboard-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dashboard-card {
+        width: 80%;
+    }
+}
+

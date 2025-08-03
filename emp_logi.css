@@ -1,0 +1,118 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+:root {
+    --primary-color: #121212; /* Deep Charcoal for Dark Background */
+    --secondary-color: #1e1e1e; /* Muted Black for Containers */
+    --text-color: #e0e0e0; /* Light Text for Contrast */
+    --hover-color: #4caf50; /* Accent Green for Highlights */
+    --shadow-dark: rgba(0, 0, 0, 0.5); /* Strong Shadow for Depth */
+    --font-family: 'Inter', sans-serif;
+    --gradient-light: linear-gradient(120deg, #1e1e1e, #272727);
+    --gradient-dark: linear-gradient(120deg, #121212, #1e1e1e);
+}
+
+/* General Reset */
+body {
+    font-family: var(--font-family);
+    background: var(--gradient-dark); /* Dark Gradient Background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full Screen */
+    margin: 0;
+    color: var(--text-color);
+}
+
+/* Login Container */
+.login-container {
+    background: var(--secondary-color); /* Darker Background for Container */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px var(--shadow-dark); /* Depth Effect */
+    text-align: center;
+    width: 350px;
+}
+
+/* Headings */
+h2 {
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Labels */
+.form-label {
+    text-align: left;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+/* Input Fields */
+.form-control {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #444; /* Subtle Border */
+    border-radius: 5px;
+    background: rgba(50, 50, 50, 0.8); /* Subtle Dark Input Fields */
+    color: var(--text-color);
+    outline: none;
+    transition: all 0.3s;
+}
+
+.form-control::placeholder {
+    color: rgba(224, 224, 224, 0.6); /* Muted Placeholder */
+}
+
+.form-control:focus {
+    background: rgba(50, 50, 50, 1);
+    border: 1px solid var(--hover-color);
+}
+
+/* Button */
+button {
+    background: var(--hover-color);
+    color: var(--text-color);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: var(--gradient-dark);
+    transform: scale(1.05);
+}
+
+/* Alert Message */
+.alert {
+    background-color: #ff4d4d; /* Error Alert Red */
+    color: white;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+/* Sign-Up Link */
+p {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+p a {
+    color: var(--hover-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+p a:hover {
+    text-decoration: underline;
+    color: #4caf50; /* Accent Green */
+}

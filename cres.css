@@ -1,0 +1,110 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;700&display=swap');
+
+/* Root Variables */
+:root {
+    --primary-bg: #FAF3E0;      /* Soft Beige */
+    --secondary-color: #EADBC8; /* Warm Cream */
+    --accent-color: #4A6572;    /* Deep Blue-Gray */
+    --hover-color: #FF6B6B;     /* Soft Coral */
+    --text-color: #333;         /* Darker for Better Readability */
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --font-family: 'Quicksand', sans-serif;
+    --gradient-button: linear-gradient(120deg, #A8DADC, #FF6B6B);
+    --gradient-hover: linear-gradient(120deg, #FF6B6B, #A8DADC);
+}
+
+/* General Styles */
+body {
+    background-color: var(--primary-bg);
+    font-family: var(--font-family);
+    text-align: center;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Form Container */
+.form-container {
+    background: rgba(255, 255, 255, 0.95); /* Light Glass Effect */
+    padding: 30px;
+    width: 350px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px var(--shadow-light);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Heading Inside Form */
+.form-container h2 {
+    color: var(--accent-color);
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Form Styling */
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Labels */
+label {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: var(--accent-color);
+    text-align: left;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+/* Input Fields */
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.5);
+    color: var(--text-color);
+    font-size: 1em;
+    outline: none;
+    transition: border 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+input:focus {
+    border-color: var(--hover-color);
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* Button */
+button {
+    background: linear-gradient(120deg, #FFA726, #FF7043); /* Warm Orange Gradient */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 8px;
+    font-size: 1.1em;
+    width: 100%;
+    margin-top: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: linear-gradient(120deg, #FF7043, #FFA726); /* Reverse Gradient */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
